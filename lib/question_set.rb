@@ -7,6 +7,14 @@ class QuestionSet
   end
 
   def generate(total, percentages)
+    if percentages.class != Hash 
+      raise TypeError.new("percentages should be a proper hash value")
+    end
+
+    if total.class != Fixnum
+      raise TypeError.new("total should be a number")
+    end
+    
     check_percentages(percentages)
 
     easy_questions = choose_easy_questions(total.percent_of(percentages[:easy]))

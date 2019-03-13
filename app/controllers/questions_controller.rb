@@ -8,7 +8,6 @@ class QuestionsController < ApplicationController
   def generate
     question_set = QuestionSet.new
     begin
-      # questions = question_set.choose(100, {easy: 40, medium: 48, hard: 12})
       questions = question_set.generate(params[:total], params[:percentages])
       render json: {success: true, data: questions }
     rescue Exception => e
