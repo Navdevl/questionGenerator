@@ -7,11 +7,11 @@ class QuestionsController < ApplicationController
 
   def choose
     question_set = QuestionSet.new
-    # begin
-      questions = question_set.choose(100, {easy: 40, medium: 40, hard: 20})
+    begin
+      questions = question_set.choose(100, {easy: 40, medium: 48, hard: 12})
       render json: {success: true, data: questions }
-    # rescue Exception => e
-      # render json: {success: false, error: e}
-    # end
+    rescue Exception => e
+      render json: {success: false, error: e}
+    end
   end
 end

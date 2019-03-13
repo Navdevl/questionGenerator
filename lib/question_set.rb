@@ -37,26 +37,44 @@ class QuestionSet
     end
   end
 
-  def can_be_filtered(questions, total_questions_size, threshold_score)
-
-    if threshold_score == 0
-      return true
+  def can_be_filtered(questions, current_index, threshold_score, table)
+    if current_index >= questions.size
+      return 1 if threshold_score == 0
+      return 0
     end
 
-    if total_questions_size == 0 and threshold_score != 0
-      return false
+    unless table.key?("#{current_index}_#{threshold_score}")
+      count = can_be_filtered(questions, current_index + 1, threshold_score, table)
+      count += can_be_filtered(questions, current_index + 1, threshold_score - questions[current_index][:score], table)
+
+      table["#{current_index}_#{threshold_score}"] = count
     end
 
-    if questions[total_questions_size - 1][:score] > threshold_score
-      return can_be_filtered(questions, total_questions_size - 1, threshold_score)
-    end
-
-    can_be_filtered(questions, total_questions_size - 1, threshold_score) or can_be_filtered(questions, total_questions_size - 1, threshold_score - questions[total_questions_size-1][:score])
-
+    return table["#{current_index}_#{threshold_score}"]
   end
+
+  def execute_filter(questions, sum, table)
+    filtered_questions = []
+
+    questions.each_with_index do |question, index|
+      if can_be_filtered(questions, index + 1, sum - question[:score], {}) > 0
+        filtered_questions.append(question)
+        sum -= question[:score]
+      end
+    end
+    return filtered_questions
+  end
+
 
   def filter_by_percentage(questions, threshold_score)
+    questions = questions.shuffle
     total_questions_size = questions.size
-    can_be_filtered(questions, total_questions_size, threshold_score)
+    if can_be_filtered(questions, 0, threshold_score, {}) > 0
+      return execute_filter(questions, threshold_score, {})
+    else
+      raise StandardError.new("Cannot generate questions with the given requirements.")
+    end
   end
+
+end
 
