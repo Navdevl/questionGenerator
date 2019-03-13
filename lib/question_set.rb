@@ -6,7 +6,7 @@ class QuestionSet
     self.dataset = YAML.load_file(dataset).deep_symbolize_keys
   end
 
-  def choose(total, percentages)
+  def generate(total, percentages)
     check_percentages(percentages)
 
     easy_questions = choose_easy_questions(total.percent_of(percentages[:easy]))
