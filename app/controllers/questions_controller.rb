@@ -2,7 +2,7 @@ class QuestionsController < ApplicationController
 
   def index
     question_set = QuestionSet.new
-    render json: question_set.questions
+    render json: question_set.dataset
   end
 
   def choose
