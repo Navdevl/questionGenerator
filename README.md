@@ -19,3 +19,5 @@ The application is hosted https://questions-generator.herokuapp.com and has two 
 4. If the requirement can't be satisfied, it will also thrown an error.
 
 
+## Logic
+You can find the whole logic in the `lib/question_set.rb` file.
