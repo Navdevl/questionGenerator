@@ -3,7 +3,93 @@ questions:
   easy:
   - id: easy-1
     score: 10
+    description: "Last Friday in three week’s time I saw a spotted striped blue worm shake hands with a legless lizard."
   - id: easy-2
+    score: 16
+    description: "She did not cheat on the test, for it was not the right thing to do."
+  - id: easy-3
+    score: 16
+    description: "Rock music approaches at high velocity."
+  - id: easy-4
+    score: 16
+    description: "Writing a list of random sentences is harder than I initially thought it would be."
+  - id: easy-5
+    score: 16
+    description: "The waves were crashing on the shore; it was a lovely sight."
+  - id: easy-6
+    score: 16
+    description: "They got there early, and they got really good seats."
+  - id: easy-7
+    score: 25
+    description: "She only paints with bold colors; she does not like pastels."
+  - id: easy-8
+    score: 25
+    description: "A glittering gem is not enough."
+  - id: easy-9
     score: 10
-  medium: []
-  hard: []
+    description: "This is the last random sentence I will be writing and I am going to stop mid-sent"
+  - id: easy-10
+    score: 30
+    description: "Sixty-Four comes asking for bread."
+  medium:
+  - id: medium-1
+    score: 50
+    description: Please wait outside of the house..
+  - id: medium-2
+    score: 25
+    description: "If Purple People Eaters are real… where do they find purple people to eat?"
+  - id: medium-3
+    score: 12
+    description: "Where do random thoughts come from?"
+  - id: medium-4
+    score: 12
+    description: "How was the math test?"
+  - id: medium-5
+    score: 12
+    description: "This is a Japanese doll."
+  - id: medium-6
+    score: 24
+    description: "He told us a very exciting adventure story."
+  - id: medium-7
+    score: 16
+    description: "She did her best to help him."
+  - id: medium-8
+    score: 4
+    description: "Cats are good pets, for they are clean and are not noisy."
+  - id: medium-9
+    score: 4
+    description: "The old apple revels in its authority."
+  - id: medium-10
+    score: 6
+    description: "I really want to go to work, but I am too sick to drive."
+  hard:
+  - id: hard-1
+    score: 16
+    description: "I currently have 4 windows open up… and I don’t know why."
+  - id: hard-2
+    score: 12
+    description: "The shooter says goodbye to his love."
+  - id: hard-3
+    score: 15
+    description: "I would have gotten the promotion, but my attendance wasn’t good enough."
+  - id: hard-4
+    score: 15
+    description: "Yeah, I think it's a good environment for learning English."
+  - id: hard-5
+    score: 22
+    description: "Wednesday is hump day, but has anyone asked the camel if he’s happy about it?"
+  - id: hard-6
+    score: 20
+    description: "I am counting my calories, yet I really want dessert."
+  - id: hard-7
+    score: 25
+    description: "He turned in the research paper on Friday; otherwise, he would have not passed the class."
+  - id: hard-8
+    score: 30
+    description: "Don't step on the broken glass."
+  - id: hard-9
+    score: 30
+    description: "He said he was not there yesterday; however, many people saw him there."
+  - id: hard-10
+    score: 40
+    description: "She advised him to come back at once."
