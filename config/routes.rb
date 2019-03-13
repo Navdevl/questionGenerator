@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   resources :questions, only: [:index] do 
     collection do 
-      get 'choose'
+      post 'choose'
     end
   end
 end
