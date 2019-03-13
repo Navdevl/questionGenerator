@@ -9,7 +9,7 @@ This is a Rails application that can perform the following operation.
 
 The application is hosted https://questions-generator.herokuapp.com and has two endpoints.
 
-1. The root endpoint that shows the loaded questions. Given the restriction to DB, the application loads a set of question from an YAML file located in https://github.com/Navdevl/questionGenerator/blob/master/lib/data/questions.yml 
+1. The root endpoint https://questions-generator.herokuapp.com/questions that shows the loaded questions. Given the restriction to DB, the application loads a set of question from an YAML file located in https://github.com/Navdevl/questionGenerator/blob/master/lib/data/questions.yml 
 
 2. POST call to https://questions-generator.herokuapp.com/questions/generate with a payload like the one given below can generate appropriate results.
 `{"total": 100, "percentages": { "easy": 50, "medium": 25, "hard": 25 }}`
@@ -21,3 +21,6 @@ The application is hosted https://questions-generator.herokuapp.com and has two 
 
 ## Logic
 You can find the whole logic in the `lib/question_set.rb` file.
+
+## Production
+This is already hosted in https://questions-generator.herokuapp.com and also there is a postman documentation that you can make use of. https://documenter.getpostman.com/view/2476650/S17kyqbM
