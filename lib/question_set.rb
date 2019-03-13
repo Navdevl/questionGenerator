@@ -7,6 +7,8 @@ class QuestionSet
   end
 
   def choose(total, percentages)
+    check_percentages_equals_total(total, percentages)
+
     easy_questions = choose_easy_questions(percentages[:easy].percent_of(total))
     medium_questions = choose_medium_questions(percentages[:medium].percent_of(total))
     hard_questions = choose_hard_questions(percentages[:hard].percent_of(total))
@@ -27,6 +29,12 @@ class QuestionSet
   def choose_hard_questions(threshold_score)
     questions = self.dataset["questions"]["hard"]
     filter_by_percentage(questions, threshold_score)
+  end
+
+  def check_percentages_equals_total(total, percentages)
+    # if total != percentages.map { |x| x[:score] }.sum 
+      # raise ArgumentError, "Total doesn't matches the percentages"
+    # end
   end
 
   def filter_by_percentage(questions, threshold_score)
