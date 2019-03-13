@@ -1,0 +1,9 @@
+---
+questions:
+  easy:
+  - id: easy-1
+    score: 10
+  - id: easy-2
+    score: 10
+  medium: []
+  hard: []
